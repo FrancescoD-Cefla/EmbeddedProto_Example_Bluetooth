@@ -61,5 +61,7 @@ message Serial
 	float proof = 2;
 	
 	repeated uint32 y = 3 [(EmbeddedProto.options).maxLength = 10];
+	
+	string myname = 4 [(EmbeddedProto.options).maxLength = 12];
 }
 
