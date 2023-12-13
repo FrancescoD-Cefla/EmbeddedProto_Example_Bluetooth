@@ -44,10 +44,18 @@ message Command
   }
   
   LED  led = 1;
+  LED led_2 = 2;
 }
 
 message Sensor
 {  
   uint32 light_sensor = 1;
+  int32 heavy_sensor = 2;
+}
+
+message Serial
+{
+	bool smth = 1;
+	float proof = 2;
 }
 
