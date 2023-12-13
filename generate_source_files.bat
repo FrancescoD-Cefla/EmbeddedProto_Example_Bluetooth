@@ -32,7 +32,7 @@
 mkdir .\nucleo-f446re\generated
 
 cd EmbeddedProto
-protoc --plugin=protoc-gen-eams=protoc-gen-eams.bat -I..\proto --eams_out=..\nucleo-f446re\generated ..\proto\ble_messages.proto
+protoc --plugin=protoc-gen-eams=protoc-gen-eams.bat -I..\proto -I.\generator -IC:\Users\decarlif\Desktop\protoc-25.1-win64\include --eams_out=..\nucleo-f446re\generated ..\proto\ble_messages.proto
 cd ..
 
 :: Generate the desktop source code.
