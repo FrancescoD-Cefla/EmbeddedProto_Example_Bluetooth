@@ -29,12 +29,12 @@
 ::
 
 :: Generate the embedded source code.
-mkdir .\nucleo-f446re\generated
+@rem mkdir .\nucleo-f446re\generated
 
-cd EmbeddedProto
+@cd EmbeddedProto
 protoc --plugin=protoc-gen-eams=protoc-gen-eams.bat -I..\proto -I.\generator -IC:\Users\decarlif\Desktop\protoc-25.1-win64\include --eams_out=..\nucleo-f446re\generated ..\proto\ble_messages.proto
-cd ..
+@cd ..
 
-:: Generate the desktop source code.
-mkdir .\desktop\generated
-protoc -I.\proto --python_out=.\desktop\generated .\proto\ble_messages.proto
+@rem :: Generate the desktop source code.
+@rem mkdir .\desktop\generated
+@rem protoc -I.\proto --python_out=.\desktop\generated .\proto\ble_messages.proto

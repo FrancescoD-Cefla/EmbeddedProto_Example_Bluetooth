@@ -33,9 +33,7 @@
 
 syntax = "proto3";
 
-import "google/protobuf/descriptor.proto";
-
-// import "embedded_proto_options.proto";
+import "embedded_proto_options.proto";
 
 message Command 
 {
@@ -61,5 +59,7 @@ message Serial
 {
 	bool smth = 1;
 	float proof = 2;
+	
+	repeated uint32 y = 3 [(EmbeddedProto.options).maxLength = 10];
 }
 
